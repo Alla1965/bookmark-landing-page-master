@@ -101,7 +101,8 @@ img {
 @layer components {
 .mobile-menu__item {
   color: white;
-  @apply text-[14px] leading-[17px] tracking-[0.5px] font-normal uppercase
+    font-weight: 400;
+  @apply text-[14px] leading-[17px] tracking-[0.5px] uppercase
 }
 
 .mobile-menu__divider {
@@ -110,8 +111,9 @@ img {
 }
 
 .features-button {
+  font-weight: 300;
   @apply w-full relative py-4 cursor-pointer
-         md:text-[16px] md:font-light md:leading-[2.25] md:tracking-[0.5px];
+         md:text-[16px]  md:leading-[2.25] md:tracking-[0.5px];
 }
 
 /* красная линия */
