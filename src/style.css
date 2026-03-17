@@ -100,11 +100,13 @@ img {
 }
 @layer components {
 .mobile-menu__item {
-  @apply text-white text-[14px] leading-[17px] tracking-[0.5px] font-normal uppercase
+  color: white;
+  @apply text-[14px] leading-[17px] tracking-[0.5px] font-normal uppercase
 }
 
 .mobile-menu__divider {
-  @apply w-full h-[1px] text-white m-6 md:m-8 opacity-[0.15]
+  color: white;
+  @apply w-full h-[1px] m-6 md:m-8 opacity-[0.15]
 }
 
 .features-button {
@@ -128,8 +130,9 @@ img {
 }
 
  .download-browser__btn{
+  color: white;
   @apply block bg-[var(--blue-600)] py-[9px] px-8
-         text-white mx-auto mt-6 rounded-[5px]
+         mx-auto mt-6 rounded-[5px]
          text-[15px] leading-[2] tracking-[0]
 
          md:mt-4 md:text-[16px] md:tracking-[0.25px]
