@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-desktop: 1440px;
+}
+
+/* подключаем второй файл */
+
+@import "../assets/css/style-main.css";
+@import "../assets/css/style-design.css";
+
+
+
+/* ================= HEADER ================= */
+
+
+        @media (min-width: 1440px) {
+        
+     .nav-menu__item:hover{
+       color: var(--red-400);
+       cursor: pointer;
+      } 
+
+      .nav-menu__item:last-child:hover {
+       background-color: white;
+       border: 1px solid var(--red-400);
+     }
+
+     }
+.mobile-menu__item {
+  @apply text-white text-[14px] leading-[17px] tracking-[0.5px] font-normal uppercase
+}
+
+.mobile-menu__divider {
+  @apply w-full h-[1px] text-white m-6 md:m-8 opacity-[0.15]
+}
+
+.features-button {
+  @apply w-full relative py-4 cursor-pointer
+         md:text-[16px] md:font-light md:leading-[2.25] md:tracking-[0.5px];
+}
+
+/* красная линия */
+.features-button::after {
+  content: '';
+  @apply absolute left-1/2 -bottom-[1px] w-1/2 h-1 bg-[var(--red-400)]
+         -translate-x-1/2 opacity-0 transition;
+}
+
+/* активный пункт */
+.features-button.active::after {
+  @apply opacity-100;
+}
+.features-button:hover{
+   color:var(--red-400)
+}
+
+ .download-browser__btn{
+  @apply block bg-[var(--blue-600)] py-[9px] px-8
+         text-white mx-auto mt-6 rounded-[5px]
+         text-[15px] leading-[2] tracking-[0]
+
+         md:mt-4 md:text-[16px] md:tracking-[0.25px]
+         desktop:!mt-6 
+ }
+
+
+    .download-browser__btn:hover {
+      background-color: white;
+      color: var(--blue-600);
+      border: 1px solid  var(--blue-600);
+     }
+
+.download-browser__img{
+@apply w-[100px] mx-auto mb-8
+                        md:w-[68px] md:h-[71px] md:mb-4
+                        desktop:!mb-8
+}
+
+.download-browser__item{
+ @apply flex flex-col  shadow-[0_10px_20px_-15px_rgba(0,0,0,0.5)]
+                     pt-[26px] pb-8
+
+                     md:flex-wrap  md:pt-[33px]  md:pb-6 rounded-[15px]
+
+                     desktop:!pt-8
+}
+
+.download-browser__title{
+ @apply mb-2 text-center text-[24px] 
+        leading-[2] tracking-[0] mx-auto
+
+       md:mb-0 md:text-[20px]  md:leading-[1.4]  
+       md:tracking-[-0.3px]
+
+       desktop:!mb-2
+       shadow-none
+}
+
+.download-browser__text{
+ @apply mb-6 text-center text-[15px] leading-[1.65] tracking-[0]
+          text-[var(--blue-950)]
+         md:mb-4 md:text-[14px] md:leading-[2]   md:tracking-[0.25px]
+         desktop:!mb-6 
+         font-normal
+}
+.faq-item__btn{
+  @apply flex w-full justify-between text-[15px] 
+         leading-[1.65] tracking-[0] 
+         text-[var(--blue-950)]
+
+         md:text-[18px]  md:leading-[1.55]
+}
+
+.faq-question-span{
+ @apply   text-[15px]  leading-[1.65] tracking-[0]  
+           font-normal text-[var(--blue-950)]
+
+          md:text-[18px]  md:leading-[1.55] 
+         
+}
+
+.faq-question-span:hover{
+   color: var(--red-400);
+}
+
+.faq-line{
+ @apply  my-[16px] text-[var(--blue-950)]
+}
+
+.faq-question{
+ @apply  font-light text-[15px] leading-[2] tracking-[0]
+          md:text-[16px]  md:leading-[2.25]  md:tracking-[0.5px]
+}
+
+.contact-input::placeholder{
+  color:var(--grey-600);
+}
+
+.contact-btn:hover{
+  background-color: white;
+  color:var(--red-400);
+  border: 1px solid var(--red-400);
+}
+
+.contact-form.error img {
+  display: block;
+}
+
+.contact-form.error p {
+  display: block;
+}
+
+.contact-form.error input {
+  border: 2px solid var(--red-400);
+}
+
+.footer-link:hover{
+  color:var(--red-400)
+}

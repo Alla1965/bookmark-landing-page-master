@@ -1,0 +1,59 @@
+        @import "tailwindcss";
+
+
+/* ================= HEADER ================= */
+
+
+        /* @media (min-width: 1440px) {
+        
+     .nav-menu__item:hover{
+       color: var(--red-400);
+       cursor: pointer;
+      } 
+
+      .nav-menu__item:last-child:hover {
+       background-color: white;
+       border: 1px solid var(--red-400);
+     }
+
+     }   */
+
+/* ================= MANAGER SECTION ================= */
+
+.chrome {
+  background-color: var(--blue-600);
+  color: white;
+  }
+
+.chrome:hover {
+  background-color: white;
+  border: 1px solid var(--blue-600);
+  color: var(--blue-600);
+  cursor: pointer;
+}
+
+.firefox {
+ background-color: var(--grey-50); 
+ color: var(--blue-950);
+ cursor: pointer  !important;
+}
+
+.firefox:hover {
+ background-color:white; 
+ color: var(--grey-600);
+  cursor: pointer  !important;
+  border: 1px solid var(--grey-600);
+}
+
+/* ================= FEATURES SECTION ================= */
+
+
+/* ================= DOWNLOAD SECTION ================= */
+
+
+/* ================= FAQ SECTION ================= */
+
+
+
+
+
