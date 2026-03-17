@@ -98,23 +98,36 @@ img {
   cursor: pointer  !important;
   border: 1px solid var(--grey-600);
 }
-@layer components {
+@layer components { 
 .mobile-menu__item {
   color: white;
     font-weight: 400;
   @apply text-[14px] leading-[17px] tracking-[0.5px] uppercase
 }
 
+
+
 .mobile-menu__divider {
-  color: white;
-  @apply w-full h-[1px] m-6 md:m-8 opacity-[0.15]
+  @apply w-full h-[1px] m-6 opacity-[0.15];
+}
+@screen md {
+  .mobile-menu__divider {
+    @apply m-8;
+  }
 }
 
 .features-button {
   font-weight: 300;
-  @apply w-full relative py-4 cursor-pointer
-         md:text-[16px]  md:leading-[2.25] md:tracking-[0.5px];
+  @apply w-full relative py-4 cursor-pointer;
 }
+
+  @screen md {
+         .features-button{
+          @apply text-[16px] leading-[2.25] tracking-[0.5px];
+                           }
+              }
+  
+  
 
 /* красная линия */
 .features-button::after {
@@ -136,11 +149,17 @@ img {
   @apply block bg-[var(--blue-600)] py-[9px] px-8
          mx-auto mt-6 rounded-[5px]
          text-[15px] leading-[2] tracking-[0]
-
-         md:mt-4 md:text-[16px] md:tracking-[0.25px]
-         desktop:!mt-6 
- }
-
+         }
+  @screen md {
+         .download-browser__btn{
+          @apply mt-4 text-[16px] tracking-[0.25px];
+                           }
+              }
+      @screen desktop {
+         .download-browser__btn{
+          @apply !mt-6 ;
+                           }
+              }          
 
     .download-browser__btn:hover {
       background-color: white;
@@ -149,53 +168,72 @@ img {
      }
 
 .download-browser__img{
-@apply w-[100px] mx-auto mb-8
-                        md:w-[68px] md:h-[71px] md:mb-4
-                        desktop:!mb-8
-}
+   @apply w-[100px] mx-auto mb-8}
+
+  @screen md {
+         .download-browser__img{
+          @apply w-[68px] h-[71px] mb-4;}
+              }
+@screen desktop {
+         .download-browser__img{@apply !mb-8;}
+              }
 
 .download-browser__item{
  @apply flex flex-col  shadow-[0_10px_20px_-15px_rgba(0,0,0,0.5)]
-                     pt-[26px] pb-8
-
-                     md:flex-wrap  md:pt-[33px]  md:pb-6 rounded-[15px]
-
-                     desktop:!pt-8
-}
+                     pt-[26px] pb-8 rounded-[15px]
+                       }
+  @screen md {
+         .download-browser__item{
+          @apply flex-wrap pt-[33px] pb-6;}
+              }
+  @screen desktop {
+         .download-browser__item{ @apply !pt-8 }
+                  }
 
 .download-browser__title{
  @apply mb-2 text-center text-[24px] 
         leading-[2] tracking-[0] mx-auto
-
-       md:mb-0 md:text-[20px]  md:leading-[1.4]  
-       md:tracking-[-0.3px]
-
-       desktop:!mb-2
-       shadow-none
 }
+
+    @screen md {
+         .download-browser__title{
+          @apply mb-0 text-[20px] leading-[1.4] tracking-[-0.3px];}
+              }
+    @screen desktop {
+         .download-browser__title{@apply !mb-2 shadow-none }
+    }
 
 .download-browser__text{
  @apply mb-6 text-center text-[15px] leading-[1.65] tracking-[0]
-          text-[var(--blue-950)]
-         md:mb-4 md:text-[14px] md:leading-[2]   md:tracking-[0.25px]
-         desktop:!mb-6 
-         font-normal
+          text-[var(--blue-950)]  font-normal
 }
+
+    @screen md {
+         .download-browser__text{
+          @apply mb-4 text-[14px] leading-[2] tracking-[0.25px];}
+              }
+    @screen desktop {
+         .download-browser__text{@apply !mb-6 }
+    }
+
 .faq-item__btn{
   @apply flex w-full justify-between text-[15px] 
          leading-[1.65] tracking-[0] 
          text-[var(--blue-950)]
-
-         md:text-[18px]  md:leading-[1.55]
 }
+ @screen md {
+         .faq-item__btn{
+          @apply text-[18px] leading-[1.55];}
+              }
 
 .faq-question-span{
  @apply   text-[15px]  leading-[1.65] tracking-[0]  
            font-normal text-[var(--blue-950)]
-
-          md:text-[18px]  md:leading-[1.55] 
-         
 }
+     @screen md {
+         .faq-question-span{
+          @apply text-[18px] leading-[1.55];}
+              }
 
 .faq-question-span:hover{
    color: var(--red-400);
@@ -207,8 +245,11 @@ img {
 
 .faq-question{
  @apply  font-light text-[15px] leading-[2] tracking-[0]
-          md:text-[16px]  md:leading-[2.25]  md:tracking-[0.5px]
-}
+       }
+  @screen md {
+         .faq-question{
+          @apply text-[16px] leading-[2.25] tracking-[0.5px];}
+              }
 
 .contact-input::placeholder{
   color:var(--grey-600);
