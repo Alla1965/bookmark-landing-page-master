@@ -15,10 +15,12 @@
   </head>
   <body>
 
+      <!--  ===   HEADER ======= --> 
+
    <header class="w-full">
     <h1 class="header__title hidden"> Bookmark landing</h1>
 
-    <nav class="flex justify-between px-8 pt-10 pb-9
+    <nav class="flex justify-between px-8 pt-10 pb-9 
                  
                  md:px-20 md:pt-10 md:pb-20
 
@@ -98,30 +100,35 @@
     <ul class="flex flex-col items-center mb-[219px]
                md:mb-[519px]">
 
-      <hr class="mobile-menu__divider">
+      <hr class="w-full h-[1px] m-[24px] opacity-[0.15]
+                 md:m-[24px] ">
 
       <li class="mobile-menu__item">
         <a class="mobile-menu__link" href="#">FEATURES</a>
       </li>
 
-       <hr class="mobile-menu__divider">
+       <hr class="w-full h-[1px] m-[24px] opacity-[0.15]
+                 md:m-[24px]">
 
       <li class="mobile-menu__item">
         <a class="mobile-menu__link" href="#">PRICING</a>
       </li>
 
-      <hr class="mobile-menu__divider">
+      <hr class="w-full h-[1px] m-[24px] opacity-[0.15]
+                 md:m-[24px]">
       <li class="mobile-menu__item">
          <a class="mobile-menu__link" href="#">CONTACT</a>
       </li>
 
-      <hr class="mobile-menu__divider">
+      <hr class="w-full h-[1px] m-[24px] opacity-[0.15]
+                 md:m-[24px]">
       <li class="mobile-menu__item 
                  w-full border-2 border-white rounded-[5px] p-[15.5px]
                  text-center">
       <a class="mobile-menu__link " href="#">LOGIN</a>
       </li>
-    <hr class="mobile-menu__divider">
+    <hr class="w-full h-[1px] m-[24px] opacity-[0.15]
+                 md:m-[24px]">
     </ul>
 
     <div class="flex gap-[40px] justify-center">
@@ -142,7 +149,7 @@
  </nav>
    </header>
 
-   <!--  ===   MAIN ======= -->
+      <!--  ===   MAIN ======= -->
 
    <main class="w-full mx-auto overflow-hidden">
 
@@ -324,7 +331,7 @@
         </div>
      </section> 
 
-        <!--  ===   Section  DOWNLOAD ======= -->
+
 
      <section class="px-8 mb-32
                      md:px-[77px]  md:mb-[142px]
@@ -345,14 +352,17 @@
           </p>
         </div>
 
-        <ul class="flex flex-col gap-10 pt-10 items-center
-                   md:flex-row  md:gap-2  md:w-full  md:justify-center  md:pt-16 
+        <ul class=" w-full flex flex-col gap-10 pt-10 items-center justify-center
+                   md:flex-row  md:gap-8  md:w-full  md:justify-center  md:pt-16 
                    desktop:!gap-8
         ">
 
-          <li class="download-browser__item " >
+          <li class="download-browser__item shadow-[0_10px_20px_-15px_rgba(0,0,0,0.5)]
+                     
+                     desktop:!mb-8
+          " >
             
-            <img class="download-browser__img" 
+            <img class="w-[102px] h-[100px] mx-auto mb-8" 
                  src="/images/logo-chrome.svg" 
                  alt="Chrome">
 
@@ -370,8 +380,10 @@
             
           </li>
 
-          <li class="download-browser__item desktop:mt-10">
-            <img class="download-browser__img" 
+          <li class="download-browser__item shadow-[0_10px_20px_-15px_rgba(0,0,0,0.5)]
+                     
+                     desktop:!mb-8 desktop:mt-10">
+            <img class="w-[102px] h-[100px] mx-auto mb-8" 
                         src="/images/logo-firefox.svg" alt="Firefox">
             <h3 class="download-browser__title">Add to Firefox</h3>
             <p class="download-browser__text">Minimum version 55</p> 
@@ -383,9 +395,11 @@
             <button class="download-browser__btn">Add & Install Extension</button>
           </li>
 
-          <li class="download-browser__item desktop:mt-20">
+          <li class="download-browser__item shadow-[0_10px_20px_-15px_rgba(0,0,0,0.5)]
+                    
+                     desktop:!mb-8 desktop:mt-20">
 
-            <img class="download-browser__img" 
+            <img class="w-[102px] h-[100px] mx-auto mb-8" 
                  src="/images/logo-opera.svg" alt="Opera">
 
              <h3 class="download-browser__title">Add to Opera</h3>
@@ -404,7 +418,7 @@
 
      <!--  ===   Section  Frequently ======= -->
 
-     <section class="py-8 px-8 w-full mb-32
+     <section class="py-[32px] px-[32px] w-full mb-[128px]
                      md:py-0 md:px-[114px]  md:mb-[202px]  
                      desktop:py-0   desktop:!px-[450px]    desktop:!mb-[182px]">
 
@@ -412,7 +426,7 @@
 
          <div class="mb-[25px]">
            
-          <h2 class="text-center mb-4 text-[30px] leading-[1.35] 
+          <h2 class="text-center mb-[16px] text-[30px] leading-[1.35] 
                      tracking-0 text-[var(--blue-950)] 
 
                      md:text-[32px]  md:tracking-[-1px] ">
@@ -430,7 +444,7 @@
 
           <hr class="md:hidden">   
 
-          <ul class="w-full mb-14">
+          <ul class="w-full mb-[56px]">
 
            <li class="faq-item">
             <button class="faq-item__btn">
@@ -438,7 +452,9 @@
               <img src="/images/icon-arrow.svg" alt="" class="w-4 h-[12px]">
              </button>
 
-              <div class="hidden faq-question">
+              <div class="faq-answer hidden font-light text-[15px] leading-[2] tracking-[0]
+                          md:text-[16px]  md:leading-[2.25] 
+              ">
                  <p>
                   Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
                   ultricies non ligula. Suspendisse imperdiet.
@@ -450,10 +466,11 @@
            <li class="faq-item active">
              <button class="faq-item__btn">
               <span class="faq-question-span">How can I request a new browser?</span>
-              <img src="/images/icon-arrow.svg" alt="" class="w-4 h-[12px]">
+              <img src="/images/icon-arrow.svg" alt="" class="w-[16px] h-[12px]">
             </button>
 
-             <div class="hidden faq-question">
+             <div class="faq-answer hidden font-light text-[15px] leading-[2] tracking-[0]
+                          md:text-[16px]  md:leading-[2.25]">
                <p>
                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
                  ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
@@ -467,10 +484,11 @@
            <li class="faq-item">
              <button class="faq-item__btn">
                <span class="faq-question-span">Is there a mobile app?</span>
-               <img src="/images/icon-arrow.svg" alt="" class="w-4 h-3">
+               <img src="/images/icon-arrow.svg" alt="" class="w-[16px] h-[12px]">
              </button>
 
-             <div class="hidden faq-question">
+             <div class="faq-answer hidden font-light text-[15px] leading-[2] tracking-[0]
+                          md:text-[16px]  md:leading-[2.25]">
                <p>
                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
                  ultricies non ligula.
@@ -484,7 +502,8 @@
                <span class="faq-question-span">What about other Chromium browsers?</span>
                <img src="/images/icon-arrow.svg" alt="" class="w-4 h-3">
               </button>
-             <div class="hidden faq-question">
+             <div class="faq-answer hidden font-light text-[15px] leading-[2] tracking-[0]
+                          md:text-[16px]  md:leading-[2.25]">
                <p>
                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
                  ultricies non ligula.
@@ -502,11 +521,11 @@
      </section>
      
         <!--  ===   Section  CONTACT ======= -->
-      <section class="py-[49px] px-8 bg-[var(--blue-600)]
-                      md:py-14 md:px-[163px]
+      <section class="py-[49px] px-[32px] bg-[var(--blue-600)]
+                      md:py-[56px] md:px-[163px]
                       desktop:!px-[499px]">
 
-               <p class="text-white text-center text-3 leading-10 tracking-[5px]
+               <p class="text-white text-center text-[12px] leading-10 tracking-[5px]
                       md:text-3.5 md:font-semibold md:leading-[3] md:!mb-6"> 
                       35,000+ ALREADY JOINED</p>
 

@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-     "deploy": "vite build && gh-pages -d dist"
+    "deploy": "vite build && gh-pages -d dist"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
@@ -22,4 +22,3 @@
     "tailwindcss": "^4.2.1"
   }
 }
-

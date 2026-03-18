@@ -1,6 +1,8 @@
-@tailwind base;
+@import "tailwindcss";
+
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 @theme {
   --breakpoint-desktop: 1440px;
@@ -19,19 +21,13 @@ legend {
   border: none;
 }
 
-
 img {
-
   max-width: none;
-  
-  
-}
+ }
 
 .hidden {
     display: none;
 }
-
-
 
   :root {
   --blue-950: #242A45;
@@ -58,7 +54,7 @@ img {
 /* ================= HEADER ================= */
 
 
-        @media (min-width: 1440px) {
+    @media (min-width: 1440px) {
         
      .nav-menu__item:hover{
        color: var(--red-400);
@@ -69,7 +65,6 @@ img {
        background-color: white;
        border: 1px solid var(--red-400);
      }
-
      }
 
      /* ================= MANAGER SECTION ================= */
@@ -106,33 +101,21 @@ img {
 }
 
 
-
-.mobile-menu__divider {
-  @apply w-full h-[1px] m-6 opacity-[0.15];
-}
-@screen md {
-  .mobile-menu__divider {
-    @apply m-8;
-  }
-}
-
 .features-button {
   font-weight: 300;
-  @apply w-full relative py-4 cursor-pointer;
+  @apply w-full relative py-[24px] cursor-pointer;
 }
 
   @screen md {
          .features-button{
           @apply text-[16px] leading-[2.25] tracking-[0.5px];
-                           }
-              }
+         }
+         }
   
-  
-
 /* красная линия */
 .features-button::after {
   content: '';
-  @apply absolute left-1/2 -bottom-[1px] w-1/2 h-1 bg-[var(--red-400)]
+  @apply absolute left-1/2 -bottom-[1px] w-1/2 h-[4px] bg-[var(--red-400)]
          -translate-x-1/2 opacity-0 transition;
 }
 
@@ -146,20 +129,30 @@ img {
 
  .download-browser__btn{
   color: white;
-  @apply block bg-[var(--blue-600)] py-[9px] px-8
-         mx-auto mt-6 rounded-[5px]
-         text-[15px] leading-[2] tracking-[0]
-         }
+  padding: 9px 32px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 24px;
+  width: 100%;
+  background-color: var(--blue-600);
+  border-radius: 5px;
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0;
+ }
+ 
+        
   @screen md {
          .download-browser__btn{
-          @apply mt-4 text-[16px] tracking-[0.25px];
-                           }
+          margin-top:16px;
+ 
+          @apply text-[16px] tracking-[0.25px];}
               }
       @screen desktop {
          .download-browser__btn{
-          @apply !mt-6 ;
-                           }
-              }          
+          matgin-top:24px;
+          }
+              }    
 
     .download-browser__btn:hover {
       background-color: white;
@@ -167,53 +160,61 @@ img {
       border: 1px solid  var(--blue-600);
      }
 
-.download-browser__img{
-   @apply w-[100px] mx-auto mb-8}
-
-  @screen md {
-         .download-browser__img{
-          @apply w-[68px] h-[71px] mb-4;}
-              }
-@screen desktop {
-         .download-browser__img{@apply !mb-8;}
-              }
 
 .download-browser__item{
- @apply flex flex-col  shadow-[0_10px_20px_-15px_rgba(0,0,0,0.5)]
-                     pt-[26px] pb-8 rounded-[15px]
-                       }
+  width: 100%;
+  padding-top:26px;
+  padding-bottom:32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+}
   @screen md {
          .download-browser__item{
-          @apply flex-wrap pt-[33px] pb-6;}
+            padding-top:33px;
+           padding-bottom:24px  
               }
+            }
   @screen desktop {
-         .download-browser__item{ @apply !pt-8 }
+         .download-browser__item{ 
+          padding-top:32px;
+           }
                   }
-
+                
 .download-browser__title{
- @apply mb-2 text-center text-[24px] 
+  margin-bottom: 8px;
+ @apply text-center text-[24px] 
         leading-[2] tracking-[0] mx-auto
 }
 
     @screen md {
          .download-browser__title{
-          @apply mb-0 text-[20px] leading-[1.4] tracking-[-0.3px];}
+           margin-bottom: 0;
+          @apply text-[20px] leading-[1.4] tracking-[-0.3px];}
               }
     @screen desktop {
-         .download-browser__title{@apply !mb-2 shadow-none }
+         .download-browser__title{
+          margin-bottom: 8px;
+          @apply shadow-none }
     }
 
 .download-browser__text{
- @apply mb-6 text-center text-[15px] leading-[1.65] tracking-[0]
-          text-[var(--blue-950)]  font-normal
+  margin-bottom: 24px;
+  font-weight: 400;
+ @apply text-center text-[15px] leading-[1.65] tracking-[0]
+          text-[var(--blue-950)] 
 }
 
     @screen md {
          .download-browser__text{
-          @apply mb-4 text-[14px] leading-[2] tracking-[0.25px];}
+           margin-bottom: 16px;
+          @apply text-[14px] leading-[2] tracking-[0.25px];}
               }
     @screen desktop {
-         .download-browser__text{@apply !mb-6 }
+         .download-browser__text{
+          margin-bottom: 24px;
+          }
     }
 
 .faq-item__btn{
@@ -227,8 +228,9 @@ img {
               }
 
 .faq-question-span{
- @apply   text-[15px]  leading-[1.65] tracking-[0]  
-           font-normal text-[var(--blue-950)]
+   font-weight: 400;
+    @apply   text-[15px]  leading-[1.65] tracking-[0]  
+           text-[var(--blue-950)]
 }
      @screen md {
          .faq-question-span{
@@ -242,14 +244,6 @@ img {
 .faq-line{
  @apply  my-[16px] text-[var(--blue-950)]
 }
-
-.faq-question{
- @apply  font-light text-[15px] leading-[2] tracking-[0]
-       }
-  @screen md {
-         .faq-question{
-          @apply text-[16px] leading-[2.25] tracking-[0.5px];}
-              }
 
 .contact-input::placeholder{
   color:var(--grey-600);

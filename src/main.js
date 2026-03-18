@@ -53,9 +53,9 @@ buttonFaq.forEach(button => {
   button.addEventListener("click", () => {
 
     const item = button.closest(".faq-item");
-    const answer = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
 
-    document.querySelectorAll(".faq-question").forEach(el => {
+    document.querySelectorAll(".faq-answer").forEach(el => {
       if (el !== answer) el.classList.add("hidden");
     });
 
