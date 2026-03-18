@@ -1,6 +1,7 @@
 import "./style.css";
 
 
+
 const buttonFaq = document.querySelectorAll(".faq-item__btn");
 const form = document.querySelector(".contact-form");
 const input = document.querySelector(".contact-input");
